@@ -12,8 +12,8 @@ import { faRetweet } from '@fortawesome/free-solid-svg-icons';
 import { faVolumeDown } from '@fortawesome/free-solid-svg-icons';
 import './_player.scss';
 
-export default function Player() {
-  return (
+export default class Player extends React.Component {
+  render = () => (
     <div className="player">
       <div className="player__album">
         <span />

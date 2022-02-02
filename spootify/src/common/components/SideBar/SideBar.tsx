@@ -10,7 +10,9 @@ import {
 import { ReactComponent as Avatar } from '../../../assets/images/avatar.svg';
 import './_sidebar.scss';
 
-function renderSideBarOption(link, icon, text, { selected } = {}) {
+//TODO: Fix types here
+
+const renderSideBarOption = (link: any, icon: any, text: any, { selected }: any = {}) => {
   return (
     <div
       className={cx('sidebar__option', { 'sidebar__option--selected': selected })}
@@ -21,8 +23,8 @@ function renderSideBarOption(link, icon, text, { selected } = {}) {
   )
 }
 
-export default function SideBar() {
-  return (
+export default class SideBar extends React.Component {
+  render = () => (
     <div className="sidebar">
       <div className="sidebar__profile">
         <Avatar />
