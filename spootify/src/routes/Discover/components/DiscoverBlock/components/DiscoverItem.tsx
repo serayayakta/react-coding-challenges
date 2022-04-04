@@ -1,10 +1,10 @@
-import React from 'react';
-import '../styles/_discover-item.scss';
+import React from "react";
+import "../styles/_discover-item.scss";
 
 //TODO: Fix types here
 interface IDiscoverItemProps {
-  images: Array<any>;
-  name: any;
+  images: Array<{ url: string }>;
+  name: string;
 }
 
 export default class DiscoverItem extends React.Component<IDiscoverItemProps> {
@@ -19,5 +19,5 @@ export default class DiscoverItem extends React.Component<IDiscoverItemProps> {
         <p className="discover-item__title">{name}</p>
       </div>
     );
-  }
+  };
 }
